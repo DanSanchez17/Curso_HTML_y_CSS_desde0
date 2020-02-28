@@ -1,0 +1,107 @@
+ * {
+ 	margin: 0;
+ 	padding: 0;
+ 	text-decoration: none;
+ 	list-style: none;
+ 	font-family:'Source Code Pro', monospace; /*puse una fuente de google*/
+ }
+
+ body {
+ 	background: #FF8F7D;
+ }
+
+
+ #galeria ul#cajaGaleria li div#galeria00 { /*solo para irlo ubicando*/
+ 	background: #ABFF7D;
+ }
+
+ section#galeria {
+ 	position: relative;
+	margin: auto;
+	width: 1000px;
+	height: 299px;
+	background: white;
+ }
+
+ section#galeria ul#cajaGaleria {
+ 	position: relative;
+ 	width: 935px;
+ 	margin: auto;
+ 	top: 18px;
+ 	height: 262px;
+ 	background: white;
+ 	box-shadow: 0px 0px 30px #7D8B75; /*vertical horizontal intensidad_de_sombra color*/
+ }
+
+ section#galeria ul#cajaGaleria li div {
+ 	position: absolute;
+ 	opacity: 0; /*le damos opacidad 0 para que no se vean en un comienzo*/
+ 	right: 20px;
+ 	top: 20px;
+ 	-webkit-transition: all .2s ease-out;
+ 	-moz-transition: all .2s ease-out;
+ 	/*ponemos prefijos webkit y moz para que sea compatible con todas las versiones antiguas de navegadores*/
+ }
+
+ section#galeria ul#cajaGaleria li div#galeria00 {
+ 	opacity: 1;
+ }
+
+ section#galeria ul#cajaGaleria li div h1 {
+ 	position:absolute;
+ 	z-index: 1;
+ 	top:20px;
+ 	left: 20px;
+ 	color: white;
+ 	font-weight: 100; /*con esto hacemos mas delgada o gruesa la letra*/
+ }
+
+ section#galeria ul#cajaGaleria li div p {
+ 	position: absolute;
+ 	z-index: 1;
+ 	bottom: 4px;
+ 	background: rgba(0,0,0,.4); /*negro con transparencia*/
+ 	color: white;
+ 	width: 97.2%;
+ 	line-height: 60px;
+ 	padding-left: 20px;
+ }
+
+ 
+ /*organizamos los labels para que esten acomodados correctamente*/
+section#galeria ul#cajaGaleria li label {
+	position: relative;
+	z-index:3;
+	width: 151px;
+	height: 72px;
+	top: 22px;
+	left: 15px;
+	margin: 2px 0;
+	cursor: pointer;
+}
+
+section#galeria ul#cajaGaleria li input {
+	display: none;
+}
+
+
+/*selectores avanzados*/
+/*cuando este chequeado algun input(imagen chica), que afecte a las imagenes
+grandes y cambien su opacidad a 1*/
+
+input#imagen1:checked ~ div#galeria01 {
+	opacity:1;
+	z-index:1;
+}
+
+input#imagen2:checked ~ div#galeria02 {
+	opacity:1;
+	z-index:1;
+}
+
+input#imagen3:checked ~ div#galeria03 {
+	opacity:1;
+	z-index:1;
+}
+/*para corregir que no se vea la imagen de por defecto 
+le incrementamos una capa a cada div con z-index:1; */

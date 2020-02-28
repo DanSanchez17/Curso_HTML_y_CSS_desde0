@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="Author" content="Dante Sanchez">
+
+	<title>PAGINA FINAL</title>
+	<link rel="icon" href="img/css.jpg">
+
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<!--ingresamos el vinculo desde google fonts copiamos el codigo que nos indique el tipo de letra a importar-->
+
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" media=""> 
+	<!--"media", hace que se adapte a pantallas: escritorio, movil, tablets, no significa que sea responsiva -->
+
+</head>
+
+<body>
+
+	<!--creamos una pestaña llamada "chat" que será fija aunque se de scroll-->
+	<div id="chat">chat</div>
+
+	<!--aqui ira el apartado de la cabecera donde
+		contendra un logotipo y tres apartados de redes sociales-->
+	<header>
+			<div id="logo">Logotipo</div>
+
+			<div id="social1" class="redes">X</div>
+			<div id="social2" class="redes">X</div>
+			<div id="social3" class="redes">X</div>
+	</header>
+
+
+
+	<!--aqui ira el apartado de navegacion(menu)
+		donde contendra 5 opciones de menu-->
+	<nav>
+		<a href="#"><div id="b1" class="botones">boton1</div></a>
+		<a href="#"><div id="b2" class="botones">boton2</div></a>
+		<a href="#"><div id="b3" class="botones">boton3</div></a>
+		<a href="#"><div id="b4" class="botones">boton4</div></a>
+		<a href="#"><div id="b5" class="botones">boton5</div></a>
+	</nav>
+
+
+
+	<!--aqui ira la seccion top para (noticias,imagenes,anuncion,etc)
+		contendra 3 divisiones-->
+		<div id="top">
+			<ul>
+				<li>
+					<img src="img/uno.jpg" width="100">
+					<h1>Lorem</h1> <!--texto aleatorio de https://es.lipsum.com/feed/html-->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan</p><!--parrafo aleatorio de https://es.lipsum.com/feed/html-->
+				</li>
+
+
+				<li>
+					<img src="img/dos.jpg" width="100">
+					<h1>Lorem</h1> <!--texto aleatorio de https://es.lipsum.com/feed/html-->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan</p><!--parrafo aleatorio de https://es.lipsum.com/feed/html-->
+				</li>
+
+
+				<li>
+					<img src="img/seis.jpg" width="100">
+					<h1>Lorem</h1> <!--texto aleatorio de https://es.lipsum.com/feed/html-->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan</p><!--parrafo aleatorio de https://es.lipsum.com/feed/html-->
+				</li>
+			</ul>
+		</div>
+
+
+
+	<!--este espacio contendra la seccion principal
+		dondie tendremos dos colmnas laterales y un articulo central-->
+	<section>
+
+		<aside id="columnizq">
+			
+			<ul>
+				<li><a href="#">Link 1</a></li> <!--agregamos un ancle dentro para definir que es un vinculo-->
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+			
+
+			</ul>
+
+		</aside>
+		
+		<article id="articuloprincipal">
+
+			<h1>Articulo</h1>
+
+			<p><img src="img/cuatro.jpg" width="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum nec sapien at consequat. Vivamus molestie, ante quis fringilla euismod, elit nisi lacinia velit, vel venenatis nulla ante nec nisi. Vivamus sagittis aliquam quam, sed feugiat lacus sagittis non. Proin lacinia molestie feugiat. Aliquam in urna consectetur, malesuada quam eget, ultricies justo. Morbi euismod euismod lectus, ut bibendum justo volutpat eu. Nunc id convallis mauris. Morbi molestie lectus sed tortor scelerisque, in consectetur est pretium.</p>
+
+			<br>
+
+			<p>Nulla facilisi. Nam egestas, ipsum vitae iaculis tempus, sem enim semper sem, id lobortis tortor massa eget metus. Nam viverra porttitor dolor sed vehicula. Vivamus egestas justo libero, vitae accumsan nisi interdum finibus. Nunc egestas, eros eget vestibulum viverra, dolor nunc lobortis eros, at consequat ipsum purus at turpis. Cras porta ipsum eget odio malesuada vulputate. Vivamus eleifend, purus a auctor vulputate, lacus nunc viverra dolor, vel lacinia lorem metus sit amet neque. Quisque bibendum tincidunt imperdiet. Duis vestibulum consectetur felis sed tristique. Aenean tempor non ante nec suscipit.</p>
+
+		</article>
+
+		<aside id="columnder">
+			
+			<h1>Ingreso</h1>
+
+			<form>
+				
+				<input type="text" placeholder="usuario">
+				<input type="password" placeholder="contraseña">
+				<input type="email" placeholder="email">
+				<input type="submit" value="Enviar info">
+
+			</form>
+
+		</aside>
+
+	</section>
+
+	
+	<footer>
+		&copy; Todos los derechos reservados. <!--de esta forma se pone el signo de copyright-->
+		<!--desde la pagina para checar signos en html: https://ascii.cl/es/codigos-html.htm-->
+	</footer>	
+
+</body>
+
+
+</html>

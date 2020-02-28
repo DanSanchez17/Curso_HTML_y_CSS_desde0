@@ -1,0 +1,73 @@
+* {
+	margin:0%; /*le damos un margen de 0 */
+	padding:0%; /*le damos un margen interno de 0*/
+	list-style: none; /*quitamos el estilo a las listas*/
+	text-decoration: none; /* quitamos decoracion de texto*/
+	font-family: sans-serif; /*fuente por defecto*/
+
+	box-sizing: border-box; /*asegura que el relleno y el borde estan incluidos para que se pueda poner un margen y que lo tome ya contando el borde*/
+}
+
+.contendor {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+}
+
+
+.fila {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+
+	clear: both; /*hacemos que se respete los elementos flotantes que esten es esa fila*/
+	display: table;	
+}
+
+[class*=col-] { /*selecciona todas las clases que comiencen con la palabra "col-" y se le aplican a todas los sig valores: */
+	float: left; /*se alinea a la izquierda*/
+	border: 2px solid black; /*se define el borde de la caja*/
+	padding:20px; /*margen interno de la caja*/
+	text-align: center; /*alineo texto al centro*/
+
+
+}
+
+/*se ocuparan cajas divididas entre las 12 columnas siguiendo el tipo web responsive
+			al cual para la division se ocupara una regla de tres donde 12 es el 100%
+
+			ejemplo:
+
+			si quiero ocupar 7 columnas la formula sera
+
+			7*100 / 12  == 58.33333333 % 
+
+			y asi con el numero de columnas que quiera ocupar para cada caja */
+
+.col-12 {width: 100%;}
+
+.col-11 {width: 91.6666667%;}
+
+.col-10 {width: 83.33333333%;}
+
+.col-9 {width: 75%;}
+
+.col-8 {width: 66.6666667%;}
+
+.col-7 {width: 58.33333333%;} /*aplicamos regla de 3*/
+
+.col-6 {width: 50%;}
+
+.col-5 {width: 41.6666667%;}
+
+.col-4 {width: 33.33333333%; /*bootstrap recomienda 8 decimales para ser mas precisos*/}
+
+.col-3 {width: 25%;}
+
+.col-2 {width: 16.6666667%;}
+
+.col-1 {width: 8.33333333%;}
+
+

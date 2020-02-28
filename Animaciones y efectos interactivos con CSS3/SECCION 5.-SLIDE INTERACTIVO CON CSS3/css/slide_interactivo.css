@@ -1,0 +1,109 @@
+* {
+	margin:0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+	background: #54A1FB;
+}
+
+
+
+/*SLIDE*/
+
+#slide {
+	position: relative;
+	margin: auto;
+	width: 1000px;  /*esto y..*/
+	height: 301px; /*esto es lo que miden las imgagenes por defecto*/
+}
+
+#slide ul {
+	position: relative;
+	top:0;
+	left:0;
+	width: 1000px;
+	height: 301px;
+	background: url(../img/slide01.jpg);
+}
+
+#slide ul li img {
+	position:absolute;
+	opacity: 0;/* era .5 solo para observar las imagenes detras, lo dejamos en 0 para que solo se muestren cuando damos clic sobre cada input(label)*/
+	left:0; /*en este caso se sobreponen a los input radio*/
+	transition: opacity 1s ease-out;
+}
+
+#slide ul li label {
+
+	position: relative;
+	z-index: 3; /*que se vea tres capas enfrente*/
+	top: 304px;
+	left: 404px;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin: 0 2px;
+	background: blue;
+	border: 3px solid white;
+	cursor: pointer;
+	border-radius: 100%;
+}
+
+/*los input hacen jerarquia sobre los label por eso no da efecto al orden float:left hasta que se escondan
+los input */
+
+/*escondemos los input para que no se vean y solo se vean los label
+  , al dar clic en los label se activaran los input, por eso le dimos estilo a los label*/
+
+#slide ul li input {
+	display: none;
+}
+
+
+/*ahora colocamos una imagen de fondo liso para la botonera desde el otro div*/
+#botoneraSlide {
+
+	position: relative;
+	margin: auto;
+	width: 1000px;
+	height: 25px;
+	background: url(../img/backBotonesSlide.jpg);
+
+}
+
+
+#slide ul li label:hover {
+	background: #F6FB54;
+}
+
+#slide ul li label:active {
+	background: #FB5481;
+}
+
+
+/*selectores avanzados*/
+/*ahora ponemos opacidad a 1 a las imagenes cada que se de clic sobre su input(label) y que todas las demas sigan en
+opacidad 0*/
+
+#slide ul li input#boton1:checked ~ img#img1{
+	opacity: 1;
+}
+
+#slide ul li input#boton2:checked ~ img#img2{
+	opacity: 1;
+}
+
+#slide ul li input#boton3:checked ~ img#img3{
+	opacity: 1;
+}
+
+#slide ul li input#boton4:checked ~ img#img4{
+	opacity: 1;
+}
+
+#slide ul li input#boton5:checked ~ img#img5{
+	opacity: 1;
+}

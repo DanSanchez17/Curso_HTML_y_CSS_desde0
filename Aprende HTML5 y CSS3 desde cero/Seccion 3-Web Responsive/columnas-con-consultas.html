@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<!--etiqueta necesaria para comenzar a hacer un web responsivo, se explica a continuacion:  -->
+	
+	<!-- el viewport(ventana de visualizacion) el area visible del usuario de una pagina web. -->
+
+	<!-- width=device-width establece el ancjo de la pagina para seguir el ancho de pantalla del dispositivo (que variará en función del dispositivo). -->
+
+	<!-- initial-scale=1.0 fija el nivel de zoom inicial al 100%  cuando la pagina se carga por primera vex por el navegador-->
+
+	<title>Maqueta Responsiva</title>
+
+	<link rel="stylesheet" href="css/estilos-con-consultas.css">
+
+</head>
+
+
+<body>
+
+	<div class="contenedor">
+		
+		<div class="fila">
+			
+
+			<!-- aqui haremos uso de los media queys dependiendo del tipo y dimensiones de pantalla donde
+				se visualice nuestro contenido (PC, tablets, moviles, etc..) -->
+			<!-- hacemos uso de las diferentes clases en css de 3 cajas -->
+			<!-- comenzamos con pantallas grandes, luego medianas, chicas y extra chicas -->
+			<!-- la pagina tomara la clase que se adapte a las necesidades del dispositivo en donde estemos consultando la pagina -->
+			<!-- si es pantalla grande solo tomara las clases de pantalla grande como: col-lg-2, si fuera mediana seria: col-md-2, y asi segun sea el caso  -->
+			<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">Logo</div>
+			<div class="col-lg-6 col-md-5 col-sm-9 col-xs-12">---</div>
+			<div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">---</div>
+		</div>
+	</div>
+		
+</body>
+</html> 

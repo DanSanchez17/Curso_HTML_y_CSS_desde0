@@ -1,0 +1,325 @@
+	* { /* es el selector universal de todas las cajas de principio *  */ 
+		margin:0;
+		padding: 0;
+		list-style: none;
+		font-family: sans-serif; /*con este tipo de letra asignamos por defecto la letra de comienzo*/
+	}
+
+	#chat {
+		position:fixed; /**fixed: toma una caja y la pega a la pantalla, adherida sin moverse aunque se de scroll*/
+		width: 250px;
+		height: 40px;
+		background: magenta;
+		bottom: 0; /*con esto la colocamos hasta abajo de la pantalla*/
+		right: 20px; /*con esto la movemos de lado derecho*/
+		z-index: 1;/*propiedad que permite manejar las cajas en ejes de profundidad, aparecer delante o detras de otras cajas, por defecto viene en 0, tambien admite valores negativos, en firefox se puede visualizar el nivel de profundidad de cada caja*/
+
+		/*agregamos propiedades de vista en nuestra pestaña 'chat' */
+
+		color: white; /*color del texto*/
+		text-align: center; /*alineamos al centro de la caja el texto*/
+		line-height: 40px; /*alineado a la misma altura que mide la caja en vertical*/
+		font-family: 'Kaushan Script', cursive; /*tipo y fuente de letra*/
+		font-size: 20px; /*tamaño de letra*/
+		border-radius: 20px 20px 0 0; /*asi damos tono redondeado a las esquinas superiores*/
+		cursor: pointer; /*para indicar que es un boton o vinculo y no lo lea como texto plano*/
+
+	}
+
+	body {
+		background: #B8D8D2;
+	}
+
+	header {
+		position: relative; /*IMPORTANTE: indica que es una caja principal*/
+		margin: 20px auto; /*con esto indicamos que tendra margen de 20px parte superior e inferior y auto lo centrara*/
+		/* background: #3F4040; */
+		width:1000px;
+		height: 120px;
+	}
+
+	#logo { /*signo # para llamar un id*/
+
+		position: absolute; /*absolute para indicar que es una caja dentro de otra*/
+		/*background: #DAE4E2; */
+		height:60px;
+		width:200px;
+		top: 30px; /*indica la separacion del margen superior*/
+		left: 30px; /*indica la separacion del margen izquierdo*/
+
+		font-family: 'Kaushan Script', cursive; /*asignamos el tipo de letra que importamos desde google-fonts*/
+		font-size: 50px; /*tamaño del texto*/
+		text-align: center; /*alineamiento de texto*/
+		line-height: 60px; /*alineamiento vertical*/ /*lo alineamos de acuerdo al alto de su caja este caso 60px*/
+	}
+
+	.redes { /*signo . para llamar una clase*/
+		position:absolute; /*absolute para indicar que es una caja dentro de otra*/
+		width:42px;
+		height:42px;
+		background:#DAE4E2;
+		border-radius:100%; /*indica el radio que tendra esta caja 100%= circulo (si es ancho y alto igual)*/
+
+		text-align: center; /*lo alinea al centro de la caja*/
+		line-height: 42px; /*lo alinea a la altura de la caja*/
+		color: white; /*color de texto*/
+
+	}
+
+	#social1 {
+		top:30px; /*indica separacion del margen superios*/
+		right: 120px; /*indica separacion del margen derecho*/
+
+		background: blue;
+	}
+
+	#social2 {
+		top:30px;
+		right: 71px;
+
+		background: green;
+	}
+
+	#social3 {
+		top:30px;
+		right: 19px;
+
+		background: red;
+	}
+
+	nav {
+		width: 1000px;
+		height: 48px;
+		position: relative; /*IMPORTANTE: indica que es una caja principal*/
+		margin:auto;
+		
+	}
+
+	.botones {
+		width:196px;
+		height: 48px;
+		float: left; /*indicamos que sean acomodados horizontalmente cada boton*/
+		margin:0 2px;
+		background: #F7524A;  
+
+		font-family: 'Kaushan Script', cursive; /*tipo de letra importado de google-fonts*/
+		text-align: center; /*alineamiento de texto horizontal al tamaño de su caja*/
+		line-height: 48px; /*alineamiento vertical del mismo tamaño de su caja*/
+		color: white; /*color de texto*/
+	}
+
+
+	a .botones:hover { /*llamamos al 'ancle' de la clase botones*/ /*hover para cuand pase el cursor por encima */
+
+		background: blue;
+	}
+
+	a .botones:active { /*active para que cambie de color cuando se da clic encima de*/
+
+		background: green;
+	}
+
+	#top {
+
+		/*background: #878A89; */ /*quitamos el color para que quede solo las divisiones*/
+		height: 192px;
+		width: 1000px;
+		position: relative;
+		margin:20px auto;
+		font-size: 10px;
+		color: black;
+
+		text-align: center;
+
+
+	}
+
+	#top ul { /*llamamos ruta hasta ul*/
+
+		height: 192px;
+		width: 1010px; /*esto se hace solo para cuadrar los tamaños de las listas que nos falta espacio*/
+		/*damos 10px mas de lo que tenomos en nuestra division "top" quedaria en= 1010px*/
+		/*background: rgba(255,0,0,.5); /*ponemos colores con transparencia solo para observar lo que aumentamos*/
+*/
+
+	}
+
+	#top ul li { /*llamamos una ruta el id#top con la etiqueta ul y a la vez llegamos a etiqueta li*/
+
+		/* background: black; */
+		height: 192px;
+		width: 326px;
+		float: left; /*indicamos que sean acomodados horizontalmente cada lista*/
+		margin-right: 10px; /*indicamos hacia la derecha de 10px*/
+
+	}
+
+	#top ul li img { /*propiedades de las imagenes dentro de esta ruta*/
+
+		border-radius: 100%;
+		height: 100px;
+		margin:5px;
+	}
+
+	#top ul li h1 { /*propiedades de los h1 dentro de esta ruta*/
+
+		font-family: 'Kaushan Script', cursive;
+	}
+
+	#top ul li p { /*propiedades de los parrafos dentro de esta ruta*/
+
+		font-size: 14px;
+		margin: 10px;
+	}
+
+
+	section {
+		height: 453px;
+		width:1000px;
+		/* background:#3BB29E; */
+		position: relative; /*IMPORTANTE: indica que es una caja principal*/
+		margin: auto; /*esto lo centrara*/
+	}
+
+	aside#columnizq { /*otra forma de llamar un id debe ser todo junto*/
+
+		position:absolute; /*IMPORTANTE: indica que esta caja esta dentro de otra*/
+		left:0; /*indica a 0px separado de la izquierda*/
+		top:0; /*indica a 0px separado de la parte superior*/
+		width: 200px; /*damos ancho de 200px a cada columna, esta es la columna izquierda*/
+		height: 453px; /*misma altura que section*/
+		/* background: #CBF74A; */
+	}
+
+	aside#columnizq ul li {
+
+		background: gray;
+		padding: 10px; /*margen interna*/
+		margin: 2px 10px; /*2px margen vertical y 10px margen horizontal*/
+		list-style: square; /*estilo para poner un cuadritoal principio de la lista*/
+		list-style-position: inside; /*indicamos que los cuadritos esten dentro de la caja*/ 
+		/*siempre debera ir el tipo del estilo y despues la posicion*/
+		/* list-style-image: url(img/like.png); */ /*esto es para colocarle un oicono personalizado*/
+
+	}
+
+	aside#columnizq ul li a {
+
+		text-decoration: none; /*con esto desaparecemos la linea debajo que indica que es un vinculo*/
+	}
+
+
+	article#articuloprincipal { /*otra forma de llamar un id debe ser todo junto*/
+
+		position:absolute; /* IMPORTANTE: indica que es una caja dentro de otra*/
+		height: 453px; /*misma altura que nuestra section*/
+		width: 600px; /*ya que total nuestra caja mide 1000px 200px columna izq y der sumados da 400px sobran 600px, que seran los del articulo*/
+		left: 200px; /*indica separacion de 200px desde la izquierda*/
+		right: 200px; /*indica separacion de 200px desde la derecha*/
+		/* background: #52E2DB;  */
+
+
+	}
+
+	article h1 { /*propiedades de h1 dentro de esta ruta*/
+
+		font-family: 'Kaushan Script', cursive;
+		font-size: 40px;
+		margin: 20px; /*margin de 20px en la caja*/
+	}
+
+	article p img {
+
+		float: left; /*pegamos la imagen hacia la izquierda */
+		margin-right: 20px; /*asignamos una margen hacia la derecha de 20px*/
+	}
+
+	article p { /*propiedades del parrafo dentro de esta ruta*/
+
+		margin:5px 20px; /*5px de margen vertical y 20px de margen horizontal*/
+		font-size:14px; /*damos un tamaño de texto de 14px*/
+		text-align: justify; /*justificamos el texto*/
+	}
+
+
+
+	aside#columnder { /*otra forma de llamar un id debe ser todo junto*/
+
+		position:absolute; /*IMPORTANTE: indica que esta caja esta dentro de otra*/
+		right:0; /*indica a 0px separado de la derecha*/
+		top:0; /*indica a 0px separado de la parte superior*/
+		width: 200px; /*damos ancho de 200px a cada columna, esta es la columna derecha*/
+		height: 453px; /*misma altura que section*/
+		/*	background: #CBF74A; */
+	}
+
+	aside#columnder h1 {
+
+		width: 200px; /*ancho de la caja*/
+		height: 50px; /*altura de la caja*/
+		text-align:center; /*texto alineado al centro*/
+		line-height: 50px; /*alineado a la misma altura de la caja en vertical*/
+		background: #F7524A;
+		color: black;
+		margin-bottom: 5px; /*margen inferior de las otras cajas*/
+	}
+
+	aside#columnder input {
+
+		padding: 10px;
+		margin: 5px 0; /*5px de margen a nivel vertical y 0 a nivel horizontal*/
+		width:176px;
+
+	}
+
+	aside#columnder input[type="text"] { /*otra forma de llamar una ruta ahora por atributo*/
+
+		background: url(img/avatar.png); /*ingresamos un icono dentro de la caja de usuario*/
+		background-repeat: no-repeat; /*decimos que no se repita la imagen*/
+		background-position: right; /*indicamos la posicion donde queremos el icono*/
+		background-size: auto; /*indicamos que se ajuste al tamaño de la caja */
+		/*podemos poner background-size: contain;  -para que quede ajustado a la caja pero 'auto' queda mejor */
+
+	}
+
+
+	aside#columnder input[type="password"] {
+
+		background: url(img/pass.png);
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: auto;
+
+	}
+
+
+	aside#columnder input[type="email"] {
+
+		background: url(img/mail.png);
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: auto;
+	}
+
+	aside#columnder input[type="submit"] {
+
+		background: yellow;
+		border:1; /*esto le quita o le pone borde al boton*/
+		margin:10px 12px; /*use el inspeccionador de chrome para saber cuantos pixeles necesitaba para centrar*/
+	}
+
+
+
+	footer {
+		width:1000px; /*ancho*/
+		height: 70px; /*alto*/
+		background: #536764;
+		position: relative; /*IMPORTANTE: indica que es una caja principal*/
+		margin: 20px auto; /*20px separacion superior e inferior   auto separacion auto lo centrara*/
+
+		text-align: center;
+		line-height: 70px;
+		color: white;
+
+	}
+

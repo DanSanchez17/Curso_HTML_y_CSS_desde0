@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<!--etiqueta necesaria para comenzar a hacer un web responsivo, se explica a continuacion:  -->
+	
+	<!-- el viewport(ventana de visualizacion) el area visible del usuario de una pagina web. -->
+
+	<!-- width=device-width establece el ancjo de la pagina para seguir el ancho de pantalla del dispositivo (que variará en función del dispositivo). -->
+
+	<!-- initial-scale=1.0 fija el nivel de zoom inicial al 100%  cuando la pagina se carga por primera vex por el navegador-->
+
+	<title>maquetacion por columnas</title>
+
+	<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+
+<body>
+		<!-- el contenedor sera toda mi ventana -->
+		<div class="contenedor">
+			
+
+			<!-- se ocuparan cajas divididas entre las 12 columnas siguiendo el tipo web responsive
+			al cual para la division se ocupara una regla de tres donde 12 es el 100%
+
+			ejemplo:
+
+			si quiero ocupar 7 columnas la formula sera
+
+			7*100 / 12  == 58.33333333 % 
+
+			y asi con el numero de columnas que quiera ocupar para cada caja -->
+
+
+
+			<!-- se ocupa 1 caja -->
+			<div class="fila">
+				
+				<div class="col-12">100%</div>
+
+			</div>
+
+			<!-- se ocupan 2 cajas -->
+			<div class="fila">
+				
+				<div class="col-6">50%</div>
+				<div class="col-6">50%</div>
+			</div>
+	
+
+			<!-- se ocupan 4 cajas -->
+			<div class="fila">
+				<div class="col-3">25%</div>
+				<div class="col-3">25%</div>
+				<div class="col-3">25%</div>
+				<div class="col-3">25%</div>
+			</div>
+			
+            
+            <!-- se ocuparan 2 cajas  1 con 25% y otra el resto 75%-->
+			<div class="fila">
+				<div class="col-3">25%</div>
+				<div class="col-9">75%</div>
+			</div>
+
+			<!-- se ocuparan 4 cajas -->
+			<div class="fila">
+				<div class="col-4">33.33%</div>
+				<div class="col-4">33.33%</div>
+				<div class="col-4">33.33%</div>
+			</div>
+
+			<!--que ocupen 7 y 5 columnas -->
+			<div class="fila">
+				<div class="col-7">58.33%</div>
+				<div class="col-5">41.67%</div>
+			</div>
+
+ 			<!-- que ocupen 8, 2, 1, 1, columnas -->
+ 			<div class="fila">
+ 				<div class="col-8">66.66%</div>
+ 				<div class="col-2">16.66%</div>
+ 				<div class="col-1">8.33%</div>
+ 				<div class="col-1">8.33%</div>
+ 			</div>
+
+ 			<!-- dejamos vacia una columna o columnas
+ 			solo para saber el comportamiento   -->
+			<div class="fila">
+				<div class="col-3">25%</div>
+				<div class="col-3">25%</div>
+				<div class="col-3">25%</div>
+				<!-- aqui faltaria una para completar -->
+			</div>
+
+			<!-- le ponemos un color dentro del html para distinguir como toma en cuenta ahora la fila con las propiedades que pusimos display:table en css -->
+			<div class="fila" style="background: red">
+				<div class="col-3">25%</div>
+				<div class="col-3">25%</div>
+				<div class="col-3">25%</div>
+				<!-- se junta con el espacio de la fila de arriba -->
+			</div>
+
+			<!-- aqui haremos en css un clear-both para evitar esto en la clase .fila -->
+
+
+			<!-- aqui ponemos un texto y se junta con la fila de arriba no respetando en este caso por este texto -->
+			<h1>HOLA</h1>
+
+			<!-- agregamos una propiedad en css llamada display: table para que respete la fila y asi ya baja el texto "HOLA" -->
+
+
+			
+					
+
+		</div>
+</body>
+</html> 

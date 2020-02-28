@@ -1,0 +1,120 @@
+<!DOCTYPE>
+<html>
+    <head>
+
+            <meta charset="utf-8">
+            <meta name="author" content="Dante Oswaldo Sanchez Castrejon">
+            <meta name="description" content="aqui se pone la descripcion del sitio">      
+            <meta name="keywords" content="tutoriales, html, desarrollo web, etc">
+
+            <title>Estructura de la cabecera</title>
+
+            <!--link para insertar una imagen o icono que parezca en el titulo de la pestaña-->
+            <link rel="icon" href="img/1.jpg">
+    </head>
+
+    
+    <body>
+
+
+        <header>
+        
+        <!--etiqueta div se utiliza para englobar secciones para darles diseño por separado
+            , asi que se debe usar un id o un class para su clasificacion-->
+            <!--cuando asignamos un 'id' sera unico y no podra ser utilizado en ningun otro id-->
+        <div id="logotipo">Logotipo</div>
+
+        </header>
+      
+        
+
+        <center> <!--etiqueta center para centrar todo lo que este dentro de ella-->
+
+        <h2>Formulario</h2>
+        
+        <form>
+
+            <!--required para solicitar llenar campos obligatoriamente-->
+
+            <!--type="text" para ingresar texto-->
+            <!--atributo for para asignar que esa etiqueta corresponde a la caja con id texto en este caso-->
+            <label for="texto">Nombre: </label>
+            <input id="texto" type="text" placeholder="aqui va tu nombre" value="" required></input>
+
+            <br>
+            <br>
+
+            <!--type="email" para ingresar correos con validacion @ y dominio .com u otro-->
+            <!--atributo for para asignar que esa etiqueta corresponde a la caja con id correo en este caso-->
+            <label for="correo">Correo: </label>
+            <input id="correo" type="email" placeholder="correo electronico" value="" required>
+
+            <br>
+            <br>
+
+            <!--type="password" para ingresar contraseña y se vea privado-->
+            <!--atributo for para asignar que esa etiqueta corresponde a la caja con id pass en este caso-->
+            <label for="pass">Contraseña: </label>
+            <input id="pass" type="password" placeholder="contraseña" value="" required>
+
+            <br>
+            <br>
+
+            <!--type="number" paraingresar numeros y definir un minimo y un maximo-->
+            <!--definiendo asi que comience por defecto con 1 y su minimo sea 0  y maximo 10-->
+            <label for="numeros">Numeros: </label>
+            <input id="numeros"  type="number" value="1" min="0" max="10" >
+
+            <br>
+            <br>
+
+            <!--etiqueta select para traer un tipo comboBox con diferentes opciones-->
+            <label for="opciones">Opciones: </label>
+            <select id="opciones">
+                <option>Opcion 1</option>
+                <option>Opcion 2</option>
+                <option>Opcion 3</option>
+            </select>
+
+            <br>
+            <br>
+
+
+            <!--type="checkbox" para seleccionar varias casillas -->
+            <!--ponemos un label delante de cada caja de seleccion para ubicarlas y asignarlas a su recuadro-->
+            <label>CheckBox: </label>
+            <input id="rojo" type="checkbox"><label for="rojo">Rojo</label>
+            <input id="amarillo" type="checkbox"><label for="amarillo">Amarillo</label>
+            <input id="verde" type="checkbox"><label for="verde">Verde</label>
+
+            
+            <br>
+            <br>
+
+            <!--type="radio" para seleccionar solo una opcion a la vez-->
+            <!--name="radio" se pone el mismo nombre para solo poder seleccionar una a la vez-->
+            <!--chequed se usa para tener seleccionada una opcion por defecto, solo si es requerido mas no obligatorio-->
+            <label>Radio: </label>
+            <input id="blanco" type="radio" name="radio" checked><label for="blanco">Blanco</label>
+            <input id="negro" type="radio" name="radio"><label for="negro">Negro</label>
+
+
+            <br>
+            <br>
+
+            <input type="submit" value="Enviar Formulario">
+            
+           
+        </form>
+
+        </center>
+        
+    
+
+       
+
+      
+                
+    </body>
+
+</html>

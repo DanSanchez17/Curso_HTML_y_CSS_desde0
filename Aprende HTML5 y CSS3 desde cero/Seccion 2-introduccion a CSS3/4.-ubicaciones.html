@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="Author" content="Dante Sanchez">
+
+	<title>Ubicaciones en HTML/CSS</title>
+	<link rel="icon" href="img/css.jpg">
+
+	<style type="text/css">
+
+	* { /* es el selector universal de todas las cajas de principio *  */ 
+		margin:0;
+		padding: 0;
+		list-style: none;
+	}
+
+	body {
+		background: #B8D8D2;
+	}
+
+	header {
+		position: relative; /*IMPORTANTE: indica que es una caja principal*/
+		margin: 20px auto; /*con esto indicamos que tendra margen de 20px parte superior e inferior y auto lo centrara*/
+		background: #3F4040;
+		width:1000px;
+		height: 120px;
+	}
+
+	#logo { /*signo # para llamar un id*/
+
+		position: absolute; /*absolute para indicar que es una caja dentro de otra*/
+		background: #DAE4E2;
+		height:60px;
+		width:200px;
+		top: 30px; /*indica la separacion del margen superior*/
+		left: 30px; /*indica la separacion del margen izquierdo*/
+	}
+
+	.redes { /*signo . para llamar una clase*/
+		position:absolute; /*absolute para indicar que es una caja dentro de otra*/
+		width:42px;
+		height:42px;
+		background:#DAE4E2;
+		border-radius:100%; /*indica el radio que tendra esta caja 100%= circulo (si es ancho y alto igual)*/
+	}
+
+	#social1 {
+		top:30px; /*indica separacion del margen superios*/
+		right: 120px; /*indica separacion del margen derecho*/
+	}
+
+	#social2 {
+		top:30px;
+		right: 71px;
+	}
+
+	#social3 {
+		top:30px;
+		right: 19px;
+	}
+
+	nav {
+		width: 1000px;
+		height: 48px;
+		position: relative; /*IMPORTANTE: indica que es una caja principal*/
+		margin:auto;
+		
+	}
+
+	.botones {
+		width:196px;
+		height: 48px;
+		float: left; /*indicamos que sean acomodados horizontalmente cada boton*/
+		margin:0 2px;
+		background: #F7524A;  
+	}
+
+	#top {
+
+		/*background: #878A89; */ /*quitamos el color para que quede solo las divisiones*/
+		height: 192px;
+		width: 1000px;
+		position: relative;
+		margin:20px auto;
+
+	}
+
+	#top ul { /*llamamos ruta hasta ul*/
+
+		height: 192px;
+		width: 1010px; /*esto se hace solo para cuadrar los tamaños de las listas que nos falta espacio*/
+		/*damos 10px mas de lo que tenomos en nuestra division "top" quedaria en= 1010px*/
+		/*background: rgba(255,0,0,.5); /*ponemos colores con transparencia solo para observar lo que aumentamos*/
+*/
+
+	}
+
+	#top ul li { /*llamamos una ruta el id#top con la etiqueta ul y a la vez llegamos a etiqueta li*/
+
+		background: black;
+		height: 192px;
+		width: 326px;
+		float: left; /*indicamos que sean acomodados horizontalmente cada lista*/
+		margin-right: 10px; /*indicamos hacia la derecha de 10px*/
+
+	}
+
+	section {
+		height: 453px;
+		width:1000px;
+		background:#3BB29E;
+		position: relative; /*IMPORTANTE: indica que es una caja principal*/
+		margin: auto; /*esto lo centrara*/
+	}
+
+	aside#columnizq { /*otra forma de llamar un id debe ser todo junto*/
+
+		position:absolute; /*IMPORTANTE: indica que esta caja esta dentro de otra*/
+		left:0; /*indica a 0px separado de la izquierda*/
+		top:0; /*indica a 0px separado de la parte superior*/
+		width: 200px; /*damos ancho de 200px a cada columna, esta es la columna izquierda*/
+		height: 453px; /*misma altura que section*/
+		background: #CBF74A;
+	}
+
+
+	article#articuloprincipal { /*otra forma de llamar un id debe ser todo junto*/
+
+		position:absolute; /* IMPORTANTE: indica que es una caja dentro de otra*/
+		height: 453px; /*misma altura que nuestra section*/
+		width: 600px; /*ya que total nuestra caja mide 1000px 200px columna izq y der sumados da 400px sobran 600px, que seran los del articulo*/
+		left: 200px; /*indica separacion de 200px desde la izquierda*/
+		right: 200px; /*indica separacion de 200px desde la derecha*/
+		background: #52E2DB;  
+
+
+	}
+
+	aside#columnder { /*otra forma de llamar un id debe ser todo junto*/
+
+		position:absolute; /*IMPORTANTE: indica que esta caja esta dentro de otra*/
+		right:0; /*indica a 0px separado de la derecha*/
+		top:0; /*indica a 0px separado de la parte superior*/
+		width: 200px; /*damos ancho de 200px a cada columna, esta es la columna derecha*/
+		height: 453px; /*misma altura que section*/
+		background: #CBF74A;
+	}
+
+	footer {
+		width:1000px; /*ancho*/
+		height: 70px; /*alto*/
+		background: #536764;
+		position: relative; /*IMPORTANTE: indica que es una caja principal*/
+		margin: 20px auto; /*20px separacion superior e inferior   auto separacion auto lo centrara*/
+
+	}
+
+	</style>
+	
+</head>
+
+<body>
+
+	<!--aqui ira el apartado de la cabecera donde
+		contendra un logotipo y tres apartados de redes sociales-->
+	<header>
+			<div id="logo"></div>
+
+			<div id="social1" class="redes"></div>
+			<div id="social2" class="redes"></div>
+			<div id="social3" class="redes"></div>
+	</header>
+
+
+
+	<!--aqui ira el apartado de navegacion(menu)
+		donde contendra 5 opciones de menu-->
+	<nav>
+		<div id="b1" class="botones"></div>
+		<div id="b2" class="botones"></div>
+		<div id="b3" class="botones"></div>
+		<div id="b4" class="botones"></div>
+		<div id="b5" class="botones"></div>
+	</nav>
+
+
+
+	<!--aqui ira la seccion top para (noticias,imagenes,anuncion,etc)
+		contendra 3 divisiones-->
+	<div id="top">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+
+
+
+	<!--este espacio contendra la seccion principal
+		dondie tendremos dos colmnas laterales y un articulo central-->
+	<section>
+		<aside id="columnizq"></aside>
+		<article id="articuloprincipal"></article>
+		<aside id="columnder"></aside>
+	</section>
+
+	
+	<footer>
+		este es el pie de pagina
+	</footer>	
+
+</body>
+
+
+</html>

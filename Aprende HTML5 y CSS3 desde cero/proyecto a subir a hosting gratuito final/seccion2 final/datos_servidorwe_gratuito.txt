@@ -1,0 +1,25 @@
+Your Account Details
+
+Your account is now active.
+Main Hosting Details
+Control panel username
+b7_24370675
+Control panel password	********** (DOS.....)
+Control panel URL
+cpanel.byethost7.com
+MySQL username
+b7_24370675
+MySQL password
+**********
+MySQL hostname
+sql211.byethost7.com
+FTP username
+b7_24370675
+FTP password
+**********
+FTP host name	ftp.byethost7.com
+
+
+Your Website URL's
+Home page
+http://principiosweb.byethost7.com

@@ -1,0 +1,74 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+body {
+	background: #7DCEA0;
+}
+
+nav#botoneraMovil {
+	position: absolute;
+	width: 90%;
+	height: auto;
+	background: white;
+	top: 50px;
+	left: -100%; /*la botonera comienza escondida de la ventana hasta hacer clic en el boton menu*/
+	transition: .5s left; /*con esto damos animacion cuando aparezca la botonera*/
+}
+
+nav#botoneraMovil ul li {
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid white;
+	background: gray;
+}
+
+nav#botoneraMovil ul li:hover {
+	background: #F13067;
+	color: white;
+}
+
+label#labelMovil span {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: url(../img/boton1.jpg) no-repeat;
+	margin: 5px;
+	cursor: pointer;/*con esto indico al cursor que se trata de un boton*/
+}
+
+input#botonMovil {
+	display: none; /*con esto escondo el recuadro del checkbox*/
+}
+
+label#labelMovil h2 {
+	position: absolute;
+	top: 10px;
+	left: 60px;
+}
+
+label#labelMovil span:hover {
+	background: url(../img/boton2.jpg) no-repeat;
+}
+
+
+/*AQUI INGRESAMOS UNAS RUTAS AVANXADAS DE CSS*/
+
+/*ADYACENTE (+) que afecta a la etiqueta inmediatamente debajo de esta cuando hace una accion*/
+/*en este caso cuando nuestro checkbox este activado(checked), cambiara la imagen del icono de menu por otyro color*/
+input#botonMovil:checked + label#labelMovil span {
+	background:url(../img/boton3.jpg) no-repeat;
+}
+
+/*HERMANO (~) afecta a una etiqueta debajo, no debera ser la etiqueta sig sino solo con que este debajo de esta*/
+/*aqui cuando nuestro checkbox este activado(checked) mostrara los botones del menu*/
+input#botonMovil:checked ~ nav#botoneraMovil {
+	left:0%;
+}
+
+

@@ -1,0 +1,385 @@
+
+* {
+	margin:0%; /*le damos un margen de 0 */
+	padding:0%; /*le damos un margen interno de 0*/
+	list-style: none; /*quitamos el estilo a las listas*/
+	text-decoration: none; /* quitamos decoracion de texto*/
+	font-family: sans-serif; /*fuente por defecto*/
+
+	box-sizing: border-box; /*asegura que el relleno y el borde estan incluidos para que se pueda poner un margen y que lo tome ya contando el borde*/
+}
+
+body {
+	background: #D6F5FB;
+}
+
+.contendor {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	
+
+
+}
+
+
+.fila {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+
+	clear: both; /*hacemos que se respete los elementos flotantes que esten es esa fila*/
+	display: table;	
+}
+
+[class*=col-] { /*selecciona todas las clases que comiencen con la palabra "col-" y se le aplican a todas los sig valores: */
+	float: left; /*se alinea a la izquierda*/
+	/*border: 2px solid black; se define el borde de la caja*/
+	padding:20px; /*margen interno de la caja*/
+	text-align: center; /*alineo texto al centro*/
+
+
+}
+
+/*=============================================
+=            SECCION 1 CABECERA            =
+=============================================*/
+
+
+header #logo {
+	font-family: 'Kaushan Script', cursive; /*FUENTE DE GOOGLE*/
+	font-size: 50px;
+	text-align: center;
+	line-height: 60px;
+	margin-top: 30px;
+
+}
+
+header center p {
+	margin-top: 30px;
+	text-align: center;
+	width: 42px;
+	line-height: 42px;
+	border-radius: 100%;
+	background: gray;
+	color: white;
+}
+
+header center#icono1 p {
+	background: blue;
+
+}
+
+header center#icono2 p {
+	background: green;
+}
+
+header center#icono3 p {
+	background: red;
+}
+
+
+/*=============================================
+=            SECCION 2 MENU (botones)     =
+=============================================*/
+
+nav ul li {
+	padding: 10px;
+	text-align: center;
+}
+
+nav ul li a {
+	display: block;
+	background: #F7524A;
+	font-family: 'Kaushan Script', cursive;
+	color: white;
+	line-height: 48px;
+}
+
+nav ul li a:hover {
+
+	background: blue;
+}
+
+nav ul li a:active {
+	background: green;
+}
+
+
+
+
+/*=============================================
+=            SECCION 3 IMAGENES(noticias)     =
+=============================================*/
+
+#seccion3 center {
+	padding: 20px;
+}
+
+#seccion3 center img {
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+}
+
+#seccion3 center h1 {
+	font-family:'Kaushan Script', cursive;
+	font-size: 40px;
+	padding: 10px;
+}
+
+
+
+
+
+/*=============================================
+=            SECCION 4 ARTICULOS Y COLUMNAS    =
+=============================================*/
+
+#seccion4 aside#izq ul li {
+	padding: 10px;
+	background: gray;
+	margin:2px 10px;
+	list-style: square;
+	list-style-position: inside;
+	list-style-image: url(../img/mail.png); /*los dos puntos(..) sirven para indicar que salen de donde este este css i despues ingresan a la ruta ingresada*/
+
+}
+
+#seccion4 article h1 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 40px;
+	margin: 20px;
+	text-align: left;
+
+}
+
+#seccion4 article p img {
+	float: left;
+	margin-right: 20px;
+
+}
+
+
+#seccion4 article p {
+	margin: 5px 20px;
+	font-size: 14px;
+	text-align: justify;
+}
+
+
+#seccion4 aside#derecha h1 {
+	line-height: 50px;
+	text-align: center;
+	background: #F7524A;
+	color:white;
+	margin-bottom: 5px;
+}
+
+
+#seccion4 aside#derecha input {
+	width: 100%;
+	padding:10px;
+	margin: 5px 0;
+}
+
+
+#seccion4 aside#derecha input[type="text"] {
+	background: url(../img/avatar.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: auto;
+}
+
+#seccion4 aside#derecha input[type="password"] {
+	background: url(../img/pass.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: auto;
+}
+
+#seccion4 aside#derecha input[type="email"] {
+	background: url(../img/mail.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: auto;
+}
+
+#seccion4 aside#derecha input[type="submit"] {
+	border: 1px solid orange;
+	background: yellow;	
+	border-radius: 12px 12px 12px 12px;
+	font-size: 15px;
+
+}
+
+
+
+
+/*=============================================
+=            SECCION 5 FOOTER         =
+=============================================*/
+
+footer {
+	padding: 20px 10px;
+}
+
+footer div {
+	text-align: center;
+	line-height: 50px; 
+	background: purple;
+	color: white;
+}
+
+
+
+
+
+
+/*=============================================
+=  AQUI HAREMOS LAS MEDIDAS RESPONSIVAS  (MEDIA-QUERYs) ó (PUNTOS DE QUIEBRE)
+EN BOOTSTRAP EXISTEN DIFERENTES MEDIDAS PARA LOS DIFERENTES DISPOSITIVOS QUE EXISTEN:
+.
+ESTOS SE CATEGORIZAN EN DIFERENTES RESOLUCIONES DE PANTALLA
+LOS CUALES SON: 
+-LARGE --  (>=1200px), (Laptops & Desktops)
+-MEDIUM -- (>=992px), (Small Laptops)
+-SMALL -- (>=768px), (Tablets)
+-EXTRA-SMALL -- (<768px), (Phones)
+
+
+link de referencia de info: https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp ;
+=============================================*/
+
+
+/*se ocuparan cajas divididas entre las 12 columnas siguiendo el tipo web responsive
+			al cual para la division se ocupara una regla de tres donde 12 es el 100%
+			ejemplo:
+			si quiero ocupar 7 columnas la formula sera
+			7*100 / 12  == 58.33333333 % 
+			y asi con el numero de columnas que quiera ocupar para cada caja */
+
+
+/*=============================================
+=          PANTALLA GRANDE - LARGE (lg)            =
+=============================================*/
+
+/*etiqueta media para declarar que medidas se adaptara la pantalla*/
+@media(min-width: 1200px) {
+
+	.col-lg-12 {width: 100%;}
+	.col-lg-11 {width: 91.6666667%;}
+	.col-lg-10 {width: 83.33333333%;}
+	.col-lg-9 {width: 75%;}
+	.col-lg-8 {width: 66.6666667%;}
+	.col-lg-7 {width: 58.33333333%;} /*aplicamos regla de 3*/
+	.col-lg-6 {width: 50%;}
+	.col-lg-5 {width: 41.6666667%;}
+	.col-lg-4 {width: 33.33333333%; /*bootstrap recomienda 8 decimales para ser mas precisos*/}
+	.col-lg-3 {width: 25%;}
+	.col-lg-2 {width: 16.6666667%;}
+	.col-lg-1 {width: 8.33333333%;}
+	.col-lg-0 {display: none;}
+
+	#seccion4 article p img {
+		width: 50%;
+	}
+
+}
+
+
+/*=============================================
+=          PANTALLA MEDIANA - MEDIUM (md)            =
+=============================================*/
+
+@media(min-width: 992px) and (max-width: 1199px) {
+
+	.col-md-12 {width: 100%;}
+	.col-md-11 {width: 91.6666667%;}
+	.col-md-10 {width: 83.33333333%;}
+	.col-md-9 {width: 75%;}
+	.col-md-8 {width: 66.6666667%;}
+	.col-md-7 {width: 58.33333333%;}
+	.col-md-6 {width: 50%;}
+	.col-md-5 {width: 41.6666667%;}
+	.col-md-4 {width: 33.33333333%;}
+	.col-md-3 {width: 25%;}
+	.col-md-2 {width: 16.6666667%;}
+	.col-md-1 {width: 8.33333333%;}
+	.col-md-0 {display: none;}
+
+		#seccion4 article p img {
+		width: 60%;
+	}
+
+}
+
+
+
+
+/*=============================================
+=          PANTALLA DE TABLETS - SMALL (sm)            =
+=============================================*/
+
+@media(min-width: 768px) and (max-width: 991px) {
+
+	.col-sm-12 {width: 100%;}
+	.col-sm-11 {width: 91.6666667%;}
+	.col-sm-10 {width: 83.33333333%;}
+	.col-sm-9 {width: 75%;}
+	.col-sm-8 {width: 66.6666667%;}
+	.col-sm-7 {width: 58.33333333%;}
+	.col-sm-6 {width: 50%;}
+	.col-sm-5 {width: 41.6666667%;}
+	.col-sm-4 {width: 33.33333333%;}
+	.col-sm-3 {width: 25%;}
+	.col-sm-2 {width: 16.6666667%;}
+	.col-sm-1 {width: 8.33333333%;}
+	.col-sm-0 {display: none;}
+
+	#seccion4 article p img {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+}
+
+
+
+
+/*=============================================
+=          PANTALLA DE CELULARES - EXTRA-SMALL (xs)            =
+=============================================*/
+
+@media(max-width: 767px) {
+
+	.col-xs-12 {width: 100%;}
+	.col-xs-11 {width: 91.6666667%;}
+	.col-xs-10 {width: 83.33333333%;}
+	.col-xs-9 {width: 75%;}
+	.col-xs-8 {width: 66.6666667%;}
+	.col-xs-7 {width: 58.33333333%;}
+	.col-xs-6 {width: 50%;}
+	.col-xs-5 {width: 41.6666667%;}
+	.col-xs-4 {width: 33.33333333%;}
+	.col-xs-3 {width: 25%;}
+	.col-xs-2 {width: 16.6666667%;}
+	.col-xs-1 {width: 8.33333333%;}
+	.col-xs-0 {display: none;}
+
+	#seccion4 article p img {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+}
+
+
+
+
+
+
+
+

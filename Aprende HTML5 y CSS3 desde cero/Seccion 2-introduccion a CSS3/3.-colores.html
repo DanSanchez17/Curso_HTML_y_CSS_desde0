@@ -1,0 +1,71 @@
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Dante Oswaldo Sanchez Castrejon">
+		<meta name="description" content="Sintaxis basica de CSS3 con html">
+		<meta name="keywords" content="css3, sintaxis, basica, dante, html">
+
+		<title>
+			Colores
+		</title>
+
+		<link rel="icon" href="img/css.jpg">
+
+		<style type="text/css">
+			
+			body {
+				background: purple;
+			}
+
+			header {
+				text-align: center;
+				color:white;
+			}
+
+			.cajas {
+
+				width:400px;
+				height:150px;
+				margin:10px;/*margen entre las cajas*/
+			}
+
+			#uno {
+				background:yellow; /*primer forma de poner un color, con un nombre*/
+			}
+
+			#dos {
+				background: #ffff; /*segunda forma de poner un color, con un codigo hexadecimal*/
+			}
+
+			#tres {
+				background: rgba(255,0,255,0.6); /*tercer forma de poner un color, formato rgba*/
+				/*la 'a' de rgbA indica 'Alpha', para colocar transparencia en los colores.
+				el ultimo numero indica el grado de transparencia, donde 1 es solido y 0 totalmente transparente*/
+			}
+
+
+
+		</style>
+
+	</head>
+
+
+	<body>	
+
+		<header>FORMAS DE PONER COLOR A LAS CAJAS CON CSS
+
+		</header>
+
+		<div id="uno" class="cajas">1.-con nombre en ingles: <br>background: yellow;</div>
+		<div id="dos" class="cajas">2.-forma hexadecimal:<br>background: #ffff;</div>
+		<div id="tres" class="cajas">3.-formato rgb : <br>background: rgba(255,0,255,0,6);</div>	
+
+
+
+		
+	</body>
+
+
+	</html>

@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding:0;
+	text-decoration: none;
+	list-style: none;
+	font-family: sans-serif;
+}
+
+body {
+	background: rgb(134, 12, 175);
+}
+
+header {
+	
+	position: relative;
+	margin: 0 auto;
+	background: gray;
+
+	width: 1000px;
+	height: 150px;
+	
+
+	
+}
+
+#cabecera{
+		/*texto */
+	text-align: center;
+	line-height: 100px; /*solo para que se ajuste y no se junte con el menu por eso es 100px y no 150px*/
+	font-family: sans-serif;
+	font-size: 30px;
+}
+
+
+#menuTop {
+	position: absolute; /*para que quede fijo*/
+	bottom: 5px; /*lo acomodamos a ciertos pixeles al inferior del cabezote*/
+	background: red;
+	height: 50px;
+	width: 1000px;
+
+}
+
+
+.nivel1 {
+	float: left;
+	width: 19.2%; /*primero era 20% pero al poner un borde tuvimos que ajustar para que no quedara desfasado la botonera principal*/
+	text-align: center;
+	line-height: 42px; /*antes era 50 pero al poner un borde de 4px tanto arriba 4 y abajo 4 dan 8px por lo que hay que ajustar a 42px*/
+	border: 4px solid black;
+	background: linear-gradient(#529105 , #82E40A); /*con esto hace el efecto de degradado de color */
+	/*otros tipos de degradados: 
+		
+		background: linear-gradient(#529105 , #82E40A, #45EFE9 );  //aparecen tres colores de degradado
+
+		para cambiar el angulo del degradado por ejemplo a 45 grados:
+		   background: linear-gradient(45deg, #529105 , #82E40A, #45EFE9 );
+
+		si se quiere hacer un degradado radial (en circulo):
+			background: radial-gradient(#529105 , #82E40A, #45EFE9 );
+		*/
+}
+
+.nivel1 a {
+	color: white; /*cambiamos el color de texto de los acnhor<a>*/
+}
+
+.nivel1:hover {
+	background: #EE4877 ;
+}
+
+.nivel1:active {
+	background: #489FEE;
+}
+
+.nivel2 {
+	position: relative; /*relativa cuando este dentro de otra caja*/
+	left: -4px; /*le quitamos los pixeles que le pusimos al borde para qu quede bien puesto el submenu*/
+	width: 100%;
+	background: #CCCE70;
+	color: #47471A;
+	text-align: center;
+	line-height: 50px;
+
+	/*ponemos los bordes de cada lado menos el de abajo para que no lo tome en cuenta y no quede tanto espacio entre los botones*/
+	border-top: 4px solid black;
+	border-left: 4px solid black;
+	border-right: 4px solid black;
+}
+
+.nivel2:hover {
+	background: #F38E22;
+	transition: background .5s ease-out; 
+	/*transition para hacer un efecto, ocupamos "background" indicando que es la propiedad sobre la que vamos a efectuar*/
+	/*luego indicamos .5segundos que es el tiempo que tomara la transicion del efecto*/
+	/*por ultimo ease-out es el tipo de efecto que elejimos, existen varias pero esta la ocuparemos esta vez*/
+}
+
+
+/*=============================================
+= AQUI HAREMOS EL EFECTO DEL MENU DE DESAPARECER Y APARECER EL SUBMENU=
+=============================================*/
+
+/*colocamos la ruta para llegar a nuestra lista de submenu*/
+#menuTop ul li ul {
+	display: none; /*indicamos que no se muestre el submenu*/
+}
+
+
+/*ahora para que se muestre el submenu cuando pasamos por encima del boton*/
+/*de igual forma ingresamos la ruta ahor poniendo la propiedad :hover*/
+#menuTop ul li:hover ul {
+	display: block;
+
+}
+
+

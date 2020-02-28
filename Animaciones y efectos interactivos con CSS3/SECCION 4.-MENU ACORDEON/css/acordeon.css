@@ -1,0 +1,61 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Indie Flower', cursive; /*es font de google*/
+}
+
+#acordeon input {
+	display:none;
+}
+
+#acordeon label {
+	display: block;
+	width: 100%;
+	line-height: 80px;
+	text-align: center;
+	background: #F0A13E;
+	border: 1px solid #34302B;
+	cursor: pointer;
+	font-size: 40px; /*extra para agrandar la letra del label*/
+}
+
+#acordeon h1 {
+	padding: 5%;
+}
+
+#acordeon img {
+	padding: 0% 5%; /*vertical horizontal*/
+}
+
+#acordeon p {
+	width: 90%;
+	padding: 5%;
+	text-align: justify;
+}
+
+
+/*ocuparemos overflow: hidden para que recorte el contenido de los divs*/
+#acordeon div {
+	position: relative; /*para que pueda moverse dependiendo de la accion*/
+	height: 0px;
+	overflow: hidden; /*ocultamos el contenido de los div*/
+	transition: 1s height; /*efecto ed animacion en la altura*/
+}
+
+
+/*uso de selectores avanzados*/
+
+/*indica que cuando la casilla checkbox este activa muestre el contenido del div#cont1*/
+input#bloque1:checked ~ #cont1 {
+	height: 850px;
+}
+
+input#bloque2:checked ~ #cont2 {
+	height: 850px;
+}
+
+input#bloque3:checked ~ #cont3 {
+	height: 850px;
+}
+
+

@@ -1,0 +1,221 @@
+
+/*damos las propiedades por defecto de la hoja de estilos*/
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+/*colocamos un fondo por defecto a nuestro body*/
+body {
+	background: red;
+}
+
+
+
+
+
+/*regla de CSS3 que permite generar una linea de tiempo para las animaciones*/
+/*colocamos @keyframes como palabra reservada y seguida de un nombre dado por nosotros*/
+
+@keyframes miAnimacion {
+
+
+/*en el porcentaje 0 empieza la opacidad en 1  a los 0 segundos */
+
+0% {
+	opacity: 1; /*con opacity hacemos el efecto que aparezca y desaparezca la imagen*/
+	/*left:0%;  con left podemos hacer el efecto de deslizar la imagen desde la izquierda*/
+}
+
+
+20% {
+	opacity: 1; /*la imagen se mantiene visible*/
+	/*left: -100%; usamos un -100% para que la imagen salga por completo de la ventana(vista)*/
+}
+
+30% {
+	opacity: 0; /*la imagen desaparece para que se muestre la imagen que hay detras de esta*/
+	/*left: -100%; usamos un -100% para que la imagen salga por completo de la ventana(vista)*/
+}
+
+90% {
+	opacity: 0;
+	/*left: -100%; usamos un -100% para que la imagen salga por completo de la ventana(vista)*/
+}
+
+
+100% {
+	opacity: 1; /*se muestra visible la imagen nuevamente*/
+	/*left: 0%; regresamos la imagen a su posicion inicial dentro de la ventana(vista) */
+}
+
+
+}
+
+
+/*se deben meter los @keyframes con prefijos de los diferentes navegadores, esto para evitar que no se visualicen las
+animaciones en navegadores como chrome, opera, firefox con versiones viejas o anteriores*/
+
+
+/*para la compatibilidad con navegadores con versiones anteriores de google chrome se utilizan prefijos en los @keyframes*/
+/*PARA GOOGLE CHROME: */
+/*ingresamos los mismos valores que en nuestro @keyframe*/
+
+@-webkit-keyframes miAnimacion {
+
+
+0% {
+	opacity: 1; /*con opacity hacemos el efecto que aparezca y desaparezca la imagen*/
+	/*left:0%;  con left podemos hacer el efecto de deslizar la imagen desde la izquierda*/
+}
+
+
+20% {
+	opacity: 1; /*la imagen se mantiene visible*/
+	/*left: -100%; usamos un -100% para que la imagen salga por completo de la ventana(vista)*/
+}
+
+30% {
+	opacity: 0; /*la imagen desaparece para que se muestre la imagen que hay detras de esta*/
+	/*left: -100%; usamos un -100% para que la imagen salga por completo de la ventana(vista)*/
+}
+
+90% {
+	opacity: 0;
+	/*left: -100%; usamos un -100% para que la imagen salga por completo de la ventana(vista)*/
+}
+
+
+100% {
+	opacity: 1; /*se muestra visible la imagen nuevamente*/
+	/*left: 0%; regresamos la imagen a su posicion inicial dentro de la ventana(vista) */
+}
+
+
+}
+
+
+/*PARA MOZILA FIREFOX Y OPERA*/
+@-moz-keyframes miAnimacion {
+
+	0% {
+	opacity: 1; /*con opacity hacemos el efecto que aparezca y desaparezca la imagen*/
+	/*left:0%;  con left podemos hacer el efecto de deslizar la imagen desde la izquierda*/
+}
+
+
+20% {
+	opacity: 1; /*la imagen se mantiene visible*/
+	/*left: -100%; usamos un -100% para que la imagen salga por completo de la ventana(vista)*/
+}
+
+30% {
+	opacity: 0; /*la imagen desaparece para que se muestre la imagen que hay detras de esta*/
+	/*left: -100%; usamos un -100% para que la imagen salga por completo de la ventana(vista)*/
+}
+
+90% {
+	opacity: 0;
+	/*left: -100%; usamos un -100% para que la imagen salga por completo de la ventana(vista)*/
+}
+
+
+100% {
+	opacity: 1; /*se muestra visible la imagen nuevamente*/
+	/*left: 0%; regresamos la imagen a su posicion inicial dentro de la ventana(vista) */
+}
+}
+
+
+/*NOTA: no existe un prefijo para navegadores de Internet Explorer de version 9 hacia atras, solo es compatible con version 10 
+en adelante*/
+
+
+
+/*==========================================================================================================================================================================
+= Ingresaremos 4 imagenes diferentes de fondo las cuales 
+crearemos un efecto en CSS3 para que vayan passando una por una en un efecto de animacion.           =
+==========================================================================================================================================================================*/
+
+
+
+/*======
+=    Para ingresar diferentes velocidades de transicion entre imagenes tenemos las siguientes propiedades:
+
+		Para poder entender y diferenciar entre estos 6 tipos (ease, linear, ease-in, ease-out, ease-in-outcubic-bezier) 
+		de «curvas de velocidad» de las transiciones CSS3 lo mejor es verlos en acción. consultar en:https://www.bufa.es/css3-transitions/
+
+
+========*/
+
+/*haremos un efecto que dure 24 segundos la transicion de imagenes donde pondremos un efecto de transicion tipo "linear"
+  que tenga un delay o retardo ciertos segudos y finalmente que se repita infinitamente */
+
+
+
+#fondo1 {
+	position: absolute; /*le damos una posicion absoluta para que no se mueva de ahi*/
+	width: 100%; /*ancho de imagen*/
+	height: 100vh; /*alto de imagen , ponemos vh cuando hacemos la CAJA absoluta*/
+	background-image: url(../img/imagen1.jpg); /*llamamos a la imagen que deseamos mostrar*/
+	background-size: cover;
+	/*
+
+	***contain:
+		Escala la imagen al mayor tamaño posible sin recortarla ni estirarla.
+
+	***cover:
+		Escala la imagen al mayor tamaño posible sin estirarla. 
+		Si las proporciones de la imagen difieren de las del elemento, 
+		es recortada vertical u horizontalmente para que no quede un espacio vacío.*/
+
+	animation: miAnimacion 10s; /*propiedad "animation" para llamar al @keyframe creado para hacer animaciones donde damos 10 segundos*/
+	/*damos 10 segundos el cual equivale al 100% de nuestra transicion podemos dar los segundos que nosotros deseemos*/
+			/*lo que tradara la transicion / efecto de transicion / delay / ciclo de trnaiscion  */
+	-webkit-animation: miAnimacion 24s linear 18s infinite; /*se pone la propiedades para los prefijos creados*/
+	-moz-animation: miAnimacion 24s linear 18s infinite; /*se pone la propiedades para los prefijos creados*/
+
+}
+
+#fondo2 {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/imagen2.jpg);
+	background-size: cover;
+	animation: miAnimacion 10s; /*propiedad "animation" para llamar al @keyframe creado para hacer animaciones donde damos 10 segundos*/
+	/*damos 10 segundos el cual equivale al 100% de nuestra transicion podemos dar los segundos que nosotros deseemos*/
+			/*lo que tradara la transicion / efecto de transicion / delay / ciclo de trnaiscion  */
+	-webkit-animation: miAnimacion 24s linear 12s infinite; /*se pone la propiedades para los prefijos creados*/
+	-moz-animation: miAnimacion 24s linear 12s infinite; /*se pone la propiedades para los prefijos creados*/
+}
+
+
+#fondo3 {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/imagen3.jpg);
+	background-size: cover;
+	animation: miAnimacion 10s; /*propiedad "animation" para llamar al @keyframe creado para hacer animaciones donde damos 10 segundos*/
+	/*damos 10 segundos el cual equivale al 100% de nuestra transicion podemos dar los segundos que nosotros deseemos*/
+			/*lo que tradara la transicion / efecto de transicion / delay / ciclo de trnaiscion  */
+	-webkit-animation: miAnimacion 24s linear 6s infinite; /*se pone la propiedades para los prefijos creados*/
+	-moz-animation: miAnimacion 24s linear 6s infinite; /*se pone la propiedades para los prefijos creados*/
+}
+
+
+#fondo4 {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-image: url(../img/imagen4.jpg);
+	background-size: contain; /*aqui ocupe contain porque convenia para mejor visualizacion especificamente de esta imagen */
+	/*opacity: 0; con esto damos 100% de trasparecnai a nuestra imagen por lo cual no se veria y mostraria la imagen debajo de esta*/
+	animation: miAnimacion 10s; /*propiedad "animation" para llamar al @keyframe creado para hacer animaciones donde damos 10 segundos*/
+	/*damos 10 segundos el cual equivale al 100% de nuestra transicion podemos dar los segundos que nosotros deseemos*/
+			/*lo que tradara la transicion / efecto de transicion / delay / ciclo de trnaiscion  */
+	-webkit-animation: miAnimacion 24s linear 0s infinite; /*se pone la propiedades para los prefijos creados*/
+	-moz-animation: miAnimacion 24s linear 0s infinite; /*se pone la propiedades para los prefijos creados*/
+}
+
